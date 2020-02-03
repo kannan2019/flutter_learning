@@ -9,9 +9,10 @@ void main() => runApp(
             title: Text('My First App'),
             backgroundColor: Colors.blueGrey[900],
           ),
-          body: Image(
-            image: NetworkImage(
-                'https://images.unsplash.com/photo-1534543210152-32025bcfaad9?ixlib=rb-1.2.1&w=1000&q=80'),
+          body: Center(
+            child: Image(
+              image: AssetImage('images/diamond.png'),
+            ),
           ),
           bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
