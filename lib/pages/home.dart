@@ -5,36 +5,70 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blueGrey,
         body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                color: Colors.red,
-                width: 100.0,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/kannan.jpg'),
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      height: 100.0,
-                      width: 100.0,
-                      color: Colors.lime[200],
-                    )
-                  ],
+              Text(
+                'Kannan S',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40.0,
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'FULLSTACK DEVELOPER',
+                style: TextStyle(
+                    color: Colors.blueGrey.shade100,
+                    fontSize: 20.0,
+                    fontFamily: 'Source Sans Pro',
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                width: 150.0,
+                height: 20.0,
+                child: Divider(
+                  color: Colors.blueGrey.shade100,
                 ),
               ),
-              Container(
-                color: Colors.blue,
-                width: 100.0,
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blueGrey.shade900,
+                  ),
+                  title: Text(
+                    '+91-9876543210',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.blueGrey.shade900),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.blueGrey.shade900,
+                  ),
+                  title: Text(
+                    'kannan@email.com',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.blueGrey.shade900),
+                  ),
+                ),
               ),
             ],
           ),
